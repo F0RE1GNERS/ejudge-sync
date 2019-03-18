@@ -1,7 +1,7 @@
 version: "3"
 services:
   sync:
-    build: .
+    image: registry.cn-shanghai.aliyuncs.com/ultmaster/ejudge-sync:latest
     container_name: lsyncd
     volumes:
       - /hd2/data:/sync/data:ro
