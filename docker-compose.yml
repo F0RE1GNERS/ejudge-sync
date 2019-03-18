@@ -5,7 +5,7 @@ services:
     container_name: lsyncd
     volumes:
       - /hd2/data:/sync/data:ro
-      - /hd2/spj:/sync/spj:ro
+      - /hd2/ejudge/spj:/sync/spj:ro
       - $PWD/log:/tmp
       - $PWD/id_rsa:/root/id_rsa
       - $PWD/lsyncd.conf:/root/lsyncd.conf
