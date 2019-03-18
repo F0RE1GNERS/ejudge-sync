@@ -7,8 +7,8 @@ services:
       - /hd2/data:/sync/data:ro
       - /hd2/ejudge/spj:/sync/spj:ro
       - /hd2/ejudge/ejudge-sync/log:/tmp
-      - /hd2/ejudge/ejudge-sync/id_rsa:/root/id_rsa
       - /hd2/ejudge/ejudge-sync/lsyncd.conf:/root/lsyncd.conf
+      - /home/acm/.ssh/id_rsa:/root/id_rsa:ro
     restart: always
     networks:
       - internal
