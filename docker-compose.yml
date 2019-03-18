@@ -1,0 +1,22 @@
+version: "3"
+services:
+  sync:
+    build: .
+    container_name: lsyncd
+    volumes:
+      - /hd2/data:/sync/data:ro
+      - /hd2/spj:/sync/spj:ro
+      - $PWD/log:/tmp
+      - $PWD/id_rsa:/root/id_rsa
+      - $PWD/lsyncd.conf:/root/lsyncd.conf
+    restart: always
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.255.3.0/24
