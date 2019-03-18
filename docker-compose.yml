@@ -6,9 +6,9 @@ services:
     volumes:
       - /hd2/data:/sync/data:ro
       - /hd2/ejudge/spj:/sync/spj:ro
-      - $PWD/log:/tmp
-      - $PWD/id_rsa:/root/id_rsa
-      - $PWD/lsyncd.conf:/root/lsyncd.conf
+      - /hd2/ejudge/ejudge-sync/log:/tmp
+      - /hd2/ejudge/ejudge-sync/id_rsa:/root/id_rsa
+      - /hd2/ejudge/ejudge-sync/lsyncd.conf:/root/lsyncd.conf
     restart: always
     networks:
       - internal
